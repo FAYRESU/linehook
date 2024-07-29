@@ -128,7 +128,7 @@ app.post("/webhook", (req, res) => {
   function calculateCircleArea(agent) {
     let pi = Math.PI
     let r = agent.parameters.r
-    let result = pi * r ** 2
+    let result = (pi * r ** 2).toFixed(2);
 
     const flexMessage = {
       type: "flex",
